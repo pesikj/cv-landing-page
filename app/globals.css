@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.5rem;
+
+    /* Navy CV theme */
+    --color-navy-dark: #0b1929;
+    --color-navy-800: #132238;
+    --color-navy-700: #1a3050;
+    --color-navy-600: #244268;
+    --color-navy-500: #3d5f82;
+    --color-navy-400: #5a7a96;
+    --color-navy-300: #8aadc0;
+    --color-navy-200: #b4cfde;
+    --color-navy-100: #d8e8f0;
+    --color-navy-50: #eef4f8;
+    --color-gold: #c9a84c;
+    --color-gold-light: #dbbf74;
+    --color-cream: #f7f4ef;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hide Next.js badge and error messages */
+body nextjs-portal {
+  display: none;
+}
+
+/* Timeline transition */
+.timeline-expand {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.timeline-expand.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
