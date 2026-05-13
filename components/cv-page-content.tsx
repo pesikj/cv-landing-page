@@ -407,15 +407,12 @@ export default function CVPageContent() {
                   2013
                 </p>
                 <h3 className="font-display text-xl font-semibold text-navy-dark">Master's Degree</h3>
-                <Link
-                  href="https://portal.zcu.cz/portal/studium/prohlizeni.html?pc_pagenavigationalstate=AAAAAQAGNjcxMDM3EwEAAAABAAhzdGF0ZUtleQAAAAEAFC05MjIzMzcyMDM2ODU0NzY3NTAxAAAAAA**#prohlizeniSearchResult"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm mt-1 block hover:underline underline-offset-4 transition-colors"
+                <span
+                  className="text-sm mt-1 block"
                   style={{ color: "var(--color-navy-600)" }}
                 >
                   Financial Informatics and Statistics
-                </Link>
+                </span>
                 <Link
                   href="https://www.fav.zcu.cz/en/index.html"
                   target="_blank"
